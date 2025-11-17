@@ -16,5 +16,7 @@ public @interface Tag {
     ARRAY,
     RECURSION,
     STDLIB,
+    MATH,
+    FLOAT,
   }
 }

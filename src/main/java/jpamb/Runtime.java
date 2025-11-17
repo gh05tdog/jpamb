@@ -22,7 +22,11 @@ public class Runtime {
       Tricky.class,
       jpamb.cases.Arrays.class,
       Dependent.class,
-      Calls.class);
+      Calls.class,
+      MathOperations.class,
+      ConditionalLogic.class,
+      RecursionExamples.class,
+      EdgeCases.class);
 
   public static Case[] cases(Method m) {
     var cases = m.getAnnotation(Cases.class);
@@ -85,6 +89,14 @@ public class Runtime {
           params.add(char.class);
           break;
         }
+        case 'F' -> {
+          params.add(float.class);
+          break;
+        }
+        case 'D' -> {
+          params.add(double.class);
+          break;
+        }
         case '[' -> {
           i += 1;
           switch (s.charAt(i)) {
@@ -98,6 +110,14 @@ public class Runtime {
             }
             case 'C' -> {
               params.add(char[].class);
+              break;
+            }
+            case 'F' -> {
+              params.add(float[].class);
+              break;
+            }
+            case 'D' -> {
+              params.add(double[].class);
               break;
             }
           }

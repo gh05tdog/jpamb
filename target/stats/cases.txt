@@ -25,6 +25,29 @@ jpamb.cases.Calls.callsAssertIf:(Z)V                         (false) -> assertio
 jpamb.cases.Calls.callsAssertIf:(Z)V                         (true) -> ok
 jpamb.cases.Calls.callsAssertIfWithTrue:()V                  () -> ok
 jpamb.cases.Calls.callsAssertTrue:()V                        () -> ok
+jpamb.cases.ConditionalLogic.assertBothTrue:(ZZ)V            (false, false) -> assertion error
+jpamb.cases.ConditionalLogic.assertBothTrue:(ZZ)V            (false, true) -> assertion error
+jpamb.cases.ConditionalLogic.assertBothTrue:(ZZ)V            (true, false) -> assertion error
+jpamb.cases.ConditionalLogic.assertBothTrue:(ZZ)V            (true, true) -> ok
+jpamb.cases.ConditionalLogic.assertFirstLessSecond:(II)V     (15, 10) -> assertion error
+jpamb.cases.ConditionalLogic.assertFirstLessSecond:(II)V     (5, 10) -> ok
+jpamb.cases.ConditionalLogic.assertFizzBuzz:(I)V             (14) -> assertion error
+jpamb.cases.ConditionalLogic.assertFizzBuzz:(I)V             (15) -> ok
+jpamb.cases.ConditionalLogic.assertGradeA:(I)V               (100) -> ok
+jpamb.cases.ConditionalLogic.assertGradeA:(I)V               (50) -> assertion error
+jpamb.cases.ConditionalLogic.assertInRange:(I)V              (0) -> ok
+jpamb.cases.ConditionalLogic.assertInRange:(I)V              (1) -> ok
+jpamb.cases.ConditionalLogic.assertInRange:(I)V              (2) -> assertion error
+jpamb.cases.ConditionalLogic.assertLeapYear:(I)V             (2023) -> assertion error
+jpamb.cases.ConditionalLogic.assertLeapYear:(I)V             (2024) -> ok
+jpamb.cases.ConditionalLogic.assertLowerCase:(I)V            (90) -> assertion error
+jpamb.cases.ConditionalLogic.assertLowerCase:(I)V            (97) -> ok
+jpamb.cases.ConditionalLogic.assertMiddleValue:(III)V        (10, 15, 5) -> assertion error
+jpamb.cases.ConditionalLogic.assertMiddleValue:(III)V        (10, 5, 15) -> ok
+jpamb.cases.ConditionalLogic.assertTriangleInequality:(III)V (1, 2, 3) -> assertion error
+jpamb.cases.ConditionalLogic.assertTriangleInequality:(III)V (3, 4, 5) -> ok
+jpamb.cases.ConditionalLogic.assertXorCondition:(ZZ)V        (false, true) -> assertion error
+jpamb.cases.ConditionalLogic.assertXorCondition:(ZZ)V        (true, false) -> ok
 jpamb.cases.Dependent.badNormalizedDistance:(II)I            (0, 0) -> divide by zero
 jpamb.cases.Dependent.badNormalizedDistance:(II)I            (1, 1) -> ok
 jpamb.cases.Dependent.divisionLoop:(I)V                      (0) -> ok
@@ -32,10 +55,62 @@ jpamb.cases.Dependent.divisionLoop:(I)V                      (1) -> ok
 jpamb.cases.Dependent.normalizedDistance:(II)I               (0, 0) -> ok
 jpamb.cases.Dependent.safeDivByN:(I)I                        (0) -> ok
 jpamb.cases.Dependent.safeDivByN:(I)I                        (1) -> ok
+jpamb.cases.EdgeCases.assertAllEqual:(III)V                  (1, 1, 1) -> ok
+jpamb.cases.EdgeCases.assertAllEqual:(III)V                  (1, 2, 3) -> assertion error
+jpamb.cases.EdgeCases.assertFalse:(Z)V                       (false) -> ok
+jpamb.cases.EdgeCases.assertFalse:(Z)V                       (true) -> assertion error
+jpamb.cases.EdgeCases.assertMaxChar:(I)V                     (65535) -> ok
+jpamb.cases.EdgeCases.assertMaxChar:(I)V                     (97) -> assertion error
+jpamb.cases.EdgeCases.assertMaxInt:(I)V                      (-2147483648) -> assertion error
+jpamb.cases.EdgeCases.assertMaxInt:(I)V                      (2147483647) -> ok
+jpamb.cases.EdgeCases.assertMinInt:(I)V                      (-2147483648) -> ok
+jpamb.cases.EdgeCases.assertMinInt:(I)V                      (2147483647) -> assertion error
+jpamb.cases.EdgeCases.assertNullChar:(I)V                    (0) -> ok
+jpamb.cases.EdgeCases.assertNullChar:(I)V                    (97) -> assertion error
+jpamb.cases.EdgeCases.assertTrue:(Z)V                        (false) -> assertion error
+jpamb.cases.EdgeCases.assertTrue:(Z)V                        (true) -> ok
+jpamb.cases.EdgeCases.assertZero:(I)V                        (0) -> ok
+jpamb.cases.EdgeCases.assertZero:(I)V                        (1) -> assertion error
+jpamb.cases.EdgeCases.conditionalDivision:(II)I              (0, 1) -> divide by zero
+jpamb.cases.EdgeCases.conditionalDivision:(II)I              (1, 0) -> ok
+jpamb.cases.EdgeCases.emptyMethod:()V                        () -> ok
+jpamb.cases.EdgeCases.identityFunction:(I)I                  (42) -> ok
+jpamb.cases.EdgeCases.overflowAddition:(I)I                  (2147483647) -> *
+jpamb.cases.EdgeCases.underflowSubtraction:(I)I              (-2147483648) -> *
 jpamb.cases.Loops.forever:()V                                () -> *
 jpamb.cases.Loops.neverAsserts:()V                           () -> *
 jpamb.cases.Loops.neverDivides:()I                           () -> *
 jpamb.cases.Loops.terminates:()V                             () -> assertion error
+jpamb.cases.MathOperations.assertArmstrongNumber:(I)V        (153) -> ok
+jpamb.cases.MathOperations.assertArmstrongNumber:(I)V        (154) -> assertion error
+jpamb.cases.MathOperations.assertEven:(I)V                   (12) -> ok
+jpamb.cases.MathOperations.assertEven:(I)V                   (13) -> assertion error
+jpamb.cases.MathOperations.assertPerfectNumber:(I)V          (28) -> ok
+jpamb.cases.MathOperations.assertPerfectNumber:(I)V          (29) -> assertion error
+jpamb.cases.MathOperations.assertPerfectSquare:(I)V          (100) -> ok
+jpamb.cases.MathOperations.assertPerfectSquare:(I)V          (99) -> assertion error
+jpamb.cases.MathOperations.assertPositive:(I)V               (0) -> assertion error
+jpamb.cases.MathOperations.assertPositive:(I)V               (5) -> ok
+jpamb.cases.MathOperations.assertPowerOfTwo:(I)V             (7) -> assertion error
+jpamb.cases.MathOperations.assertPowerOfTwo:(I)V             (8) -> ok
+jpamb.cases.MathOperations.assertPrime:(I)V                  (17) -> ok
+jpamb.cases.MathOperations.assertPrime:(I)V                  (18) -> assertion error
+jpamb.cases.MathOperations.factorial:(I)I                    (5) -> ok
+jpamb.cases.MathOperations.gcd:(II)I                         (10, 5) -> ok
+jpamb.cases.MathOperations.power:(II)I                       (2, 3) -> ok
+jpamb.cases.RecursionExamples.assertPalindromeNumber:(I)V    (121) -> ok
+jpamb.cases.RecursionExamples.assertPalindromeNumber:(I)V    (123) -> assertion error
+jpamb.cases.RecursionExamples.assertPowerOfBaseRecursive:(II)V (1000, 2) -> assertion error
+jpamb.cases.RecursionExamples.assertPowerOfBaseRecursive:(II)V (1024, 2) -> ok
+jpamb.cases.RecursionExamples.assertSumOfDigits:(I)V         (7) -> ok
+jpamb.cases.RecursionExamples.assertSumOfDigits:(I)V         (8) -> assertion error
+jpamb.cases.RecursionExamples.countdownRecursive:(I)V        (5) -> ok
+jpamb.cases.RecursionExamples.factorialRecursive:(I)I        (-1) -> assertion error
+jpamb.cases.RecursionExamples.factorialRecursive:(I)I        (5) -> ok
+jpamb.cases.RecursionExamples.fibonacciRecursive:(I)I        (-1) -> assertion error
+jpamb.cases.RecursionExamples.fibonacciRecursive:(I)I        (10) -> ok
+jpamb.cases.RecursionExamples.towerOfHanoi:(I)V              (0) -> assertion error
+jpamb.cases.RecursionExamples.towerOfHanoi:(I)V              (8) -> ok
 jpamb.cases.Simple.assertBoolean:(Z)V                        (false) -> assertion error
 jpamb.cases.Simple.assertBoolean:(Z)V                        (true) -> ok
 jpamb.cases.Simple.assertFalse:()V                           () -> assertion error
