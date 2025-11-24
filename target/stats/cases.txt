@@ -42,12 +42,12 @@ jpamb.cases.ConditionalLogic.assertLeapYear:(I)V             (2023) -> assertion
 jpamb.cases.ConditionalLogic.assertLeapYear:(I)V             (2024) -> ok
 jpamb.cases.ConditionalLogic.assertLowerCase:(I)V            (90) -> assertion error
 jpamb.cases.ConditionalLogic.assertLowerCase:(I)V            (97) -> ok
-jpamb.cases.ConditionalLogic.assertMiddleValue:(III)V        (10, 15, 5) -> assertion error
-jpamb.cases.ConditionalLogic.assertMiddleValue:(III)V        (10, 5, 15) -> ok
 jpamb.cases.ConditionalLogic.assertTriangleInequality:(III)V (1, 2, 3) -> assertion error
 jpamb.cases.ConditionalLogic.assertTriangleInequality:(III)V (3, 4, 5) -> ok
-jpamb.cases.ConditionalLogic.assertXorCondition:(ZZ)V        (false, true) -> assertion error
+jpamb.cases.ConditionalLogic.assertXorCondition:(ZZ)V        (false, false) -> assertion error
+jpamb.cases.ConditionalLogic.assertXorCondition:(ZZ)V        (false, true) -> ok
 jpamb.cases.ConditionalLogic.assertXorCondition:(ZZ)V        (true, false) -> ok
+jpamb.cases.ConditionalLogic.assertXorCondition:(ZZ)V        (true, true) -> assertion error
 jpamb.cases.Dependent.badNormalizedDistance:(II)I            (0, 0) -> divide by zero
 jpamb.cases.Dependent.badNormalizedDistance:(II)I            (1, 1) -> ok
 jpamb.cases.Dependent.divisionLoop:(I)V                      (0) -> ok
@@ -75,8 +75,6 @@ jpamb.cases.EdgeCases.conditionalDivision:(II)I              (0, 1) -> divide by
 jpamb.cases.EdgeCases.conditionalDivision:(II)I              (1, 0) -> ok
 jpamb.cases.EdgeCases.emptyMethod:()V                        () -> ok
 jpamb.cases.EdgeCases.identityFunction:(I)I                  (42) -> ok
-jpamb.cases.EdgeCases.overflowAddition:(I)I                  (2147483647) -> *
-jpamb.cases.EdgeCases.underflowSubtraction:(I)I              (-2147483648) -> *
 jpamb.cases.Loops.forever:()V                                () -> *
 jpamb.cases.Loops.neverAsserts:()V                           () -> *
 jpamb.cases.Loops.neverDivides:()I                           () -> *

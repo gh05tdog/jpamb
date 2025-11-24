@@ -22,19 +22,7 @@
       "value": null
     }
   ],
-  "innerclasses": [
-    {
-      "access": [
-        "public",
-        "static",
-        "final",
-        "enum"
-      ],
-      "class": "jpamb/utils/Tag$TagType",
-      "name": "TagType",
-      "outer": "jpamb/utils/Tag"
-    }
-  ],
+  "innerclasses": [],
   "interfaces": [],
   "methods": [
     {
@@ -75,7 +63,7 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 6,
+            "line": 7,
             "offset": 0
           }
         ],
@@ -212,11 +200,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 11,
+            "line": 12,
             "offset": 0
           },
           {
-            "line": 12,
+            "line": 13,
             "offset": 9
           }
         ],
@@ -367,11 +355,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 17,
+            "line": 18,
             "offset": 0
           },
           {
-            "line": 18,
+            "line": 19,
             "offset": 9
           }
         ],
@@ -400,204 +388,6 @@
       "returns": {
         "annotations": [],
         "type": null
-      },
-      "typeparams": []
-    },
-    {
-      "access": [
-        "public",
-        "static"
-      ],
-      "annotations": [
-        {
-          "is_runtime_visible": true,
-          "type": "jpamb/utils/Case",
-          "values": {
-            "value": {
-              "type": "string",
-              "value": "(2147483647) -> *"
-            }
-          }
-        },
-        {
-          "is_runtime_visible": true,
-          "type": "jpamb/utils/Tag",
-          "values": {
-            "value": {
-              "type": "array",
-              "value": [
-                {
-                  "type": "enum",
-                  "value": {
-                    "name": "INTEGER_OVERFLOW",
-                    "type": {
-                      "kind": "class",
-                      "name": "jpamb/utils/Tag$TagType"
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "code": {
-        "annotations": [],
-        "bytecode": [
-          {
-            "index": 0,
-            "offset": 0,
-            "opr": "load",
-            "type": "int"
-          },
-          {
-            "offset": 1,
-            "opr": "push",
-            "value": {
-              "type": "integer",
-              "value": 1
-            }
-          },
-          {
-            "offset": 2,
-            "operant": "add",
-            "opr": "binary",
-            "type": "int"
-          },
-          {
-            "offset": 3,
-            "opr": "return",
-            "type": "int"
-          }
-        ],
-        "exceptions": [],
-        "lines": [
-          {
-            "line": 23,
-            "offset": 0
-          }
-        ],
-        "max_locals": 1,
-        "max_stack": 2,
-        "stack_map": null
-      },
-      "default": null,
-      "exceptions": [],
-      "name": "overflowAddition",
-      "params": [
-        {
-          "annotations": [],
-          "type": {
-            "annotations": [],
-            "base": "int"
-          },
-          "visible": true
-        }
-      ],
-      "returns": {
-        "annotations": [],
-        "type": {
-          "base": "int"
-        }
-      },
-      "typeparams": []
-    },
-    {
-      "access": [
-        "public",
-        "static"
-      ],
-      "annotations": [
-        {
-          "is_runtime_visible": true,
-          "type": "jpamb/utils/Case",
-          "values": {
-            "value": {
-              "type": "string",
-              "value": "(-2147483648) -> *"
-            }
-          }
-        },
-        {
-          "is_runtime_visible": true,
-          "type": "jpamb/utils/Tag",
-          "values": {
-            "value": {
-              "type": "array",
-              "value": [
-                {
-                  "type": "enum",
-                  "value": {
-                    "name": "INTEGER_OVERFLOW",
-                    "type": {
-                      "kind": "class",
-                      "name": "jpamb/utils/Tag$TagType"
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "code": {
-        "annotations": [],
-        "bytecode": [
-          {
-            "index": 0,
-            "offset": 0,
-            "opr": "load",
-            "type": "int"
-          },
-          {
-            "offset": 1,
-            "opr": "push",
-            "value": {
-              "type": "integer",
-              "value": 1
-            }
-          },
-          {
-            "offset": 2,
-            "operant": "sub",
-            "opr": "binary",
-            "type": "int"
-          },
-          {
-            "offset": 3,
-            "opr": "return",
-            "type": "int"
-          }
-        ],
-        "exceptions": [],
-        "lines": [
-          {
-            "line": 29,
-            "offset": 0
-          }
-        ],
-        "max_locals": 1,
-        "max_stack": 2,
-        "stack_map": null
-      },
-      "default": null,
-      "exceptions": [],
-      "name": "underflowSubtraction",
-      "params": [
-        {
-          "annotations": [],
-          "type": {
-            "annotations": [],
-            "base": "int"
-          },
-          "visible": true
-        }
-      ],
-      "returns": {
-        "annotations": [],
-        "type": {
-          "base": "int"
-        }
       },
       "typeparams": []
     },
@@ -712,11 +502,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 35,
+            "line": 24,
             "offset": 0
           },
           {
-            "line": 36,
+            "line": 25,
             "offset": 8
           }
         ],
@@ -859,11 +649,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 41,
+            "line": 30,
             "offset": 0
           },
           {
-            "line": 42,
+            "line": 31,
             "offset": 8
           }
         ],
@@ -1006,11 +796,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 47,
+            "line": 36,
             "offset": 0
           },
           {
-            "line": 48,
+            "line": 37,
             "offset": 8
           }
         ],
@@ -1153,11 +943,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 53,
+            "line": 42,
             "offset": 0
           },
           {
-            "line": 54,
+            "line": 43,
             "offset": 8
           }
         ],
@@ -1308,11 +1098,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 59,
+            "line": 48,
             "offset": 0
           },
           {
-            "line": 60,
+            "line": 49,
             "offset": 9
           }
         ],
@@ -1479,11 +1269,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 65,
+            "line": 54,
             "offset": 0
           },
           {
-            "line": 66,
+            "line": 55,
             "offset": 12
           }
         ],
@@ -1624,23 +1414,11 @@
             "opr": "push",
             "value": {
               "type": "integer",
-              "value": 1
+              "value": 42
             }
           },
           {
-            "index": 1,
-            "offset": 9,
-            "opr": "load",
-            "type": "int"
-          },
-          {
             "offset": 10,
-            "operant": "div",
-            "opr": "binary",
-            "type": "int"
-          },
-          {
-            "offset": 11,
             "opr": "return",
             "type": "int"
           }
@@ -1648,15 +1426,15 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 71,
+            "line": 60,
             "offset": 0
           },
           {
-            "line": 72,
+            "line": 61,
             "offset": 2
           },
           {
-            "line": 74,
+            "line": 63,
             "offset": 6
           }
         ],
@@ -1733,7 +1511,7 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 79,
+            "line": 68,
             "offset": 0
           }
         ],
@@ -1791,7 +1569,7 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 85,
+            "line": 74,
             "offset": 0
           }
         ],
@@ -1888,7 +1666,7 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 6,
+            "line": 7,
             "offset": 0
           }
         ],
