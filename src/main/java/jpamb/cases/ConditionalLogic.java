@@ -12,12 +12,14 @@ public class ConditionalLogic {
     assert a < b;
   }
 
-  @Case("(true, false) -> ok")
-  @Case("(false, true) -> assertion error")
-  @Tag({ CONDITIONAL })
-  public static void assertXorCondition(boolean a, boolean b) {
+@Case("(true, false) -> ok")
+@Case("(false, true) -> ok")
+@Case("(true, true) -> assertion error")
+@Case("(false, false) -> assertion error")
+@Tag({ CONDITIONAL })
+public static void assertXorCondition(boolean a, boolean b) {
     assert (a && !b) || (!a && b);
-  }
+}
 
   @Case("(0) -> ok")
   @Case("(1) -> ok")
@@ -34,13 +36,6 @@ public class ConditionalLogic {
   @Tag({ CONDITIONAL })
   public static void assertBothTrue(boolean a, boolean b) {
     assert a && b;
-  }
-
-  @Case("(10, 5, 15) -> ok")
-  @Case("(10, 15, 5) -> assertion error")
-  @Tag({ CONDITIONAL })
-  public static void assertMiddleValue(int a, int b, int c) {
-    assert (a >= b && a <= c) || (a >= c && a <= b);
   }
 
   @Case("(100) -> ok")
