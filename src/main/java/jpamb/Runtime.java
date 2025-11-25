@@ -28,7 +28,8 @@ public class Runtime {
       ConditionalLogic.class,
       RecursionExamples.class,
       EdgeCases.class,
-      Double.class);
+      Double.class,
+      Parallel.class);
 
   public static Case[] cases(Method m) {
     var cases = m.getAnnotation(Cases.class);
