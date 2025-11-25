@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.regex.*;
 import java.util.stream.Stream;
 
+import jpamb.cases.Double;
 import jpamb.utils.*;
 import jpamb.utils.CaseContent.ResultType;
 import jpamb.cases.*;
@@ -26,7 +27,8 @@ public class Runtime {
       MathOperations.class,
       ConditionalLogic.class,
       RecursionExamples.class,
-      EdgeCases.class);
+      EdgeCases.class,
+      Double.class);
 
   public static Case[] cases(Method m) {
     var cases = m.getAnnotation(Cases.class);

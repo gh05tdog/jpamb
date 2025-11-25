@@ -143,6 +143,8 @@ class Type(ABC):
                     return Reference()
                 case "boolean":
                     return Boolean()
+                case "double":
+                    return Double()
         if "base" in json:
             return Type.from_json(json["base"])
         if "kind" in json:

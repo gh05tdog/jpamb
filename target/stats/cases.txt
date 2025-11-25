@@ -55,6 +55,12 @@ jpamb.cases.Dependent.divisionLoop:(I)V                      (1) -> ok
 jpamb.cases.Dependent.normalizedDistance:(II)I               (0, 0) -> ok
 jpamb.cases.Dependent.safeDivByN:(I)I                        (0) -> ok
 jpamb.cases.Dependent.safeDivByN:(I)I                        (1) -> ok
+jpamb.cases.Double.assertInfinityDivision:()V                () -> ok
+jpamb.cases.Double.assertInfinityMath:()V                    () -> ok
+jpamb.cases.Double.assertNaNNotEqual:()V                     () -> ok
+jpamb.cases.Double.assertNegativeZero:()V                    () -> ok
+jpamb.cases.Double.assertPrecisionLoss:()V                   () -> ok
+jpamb.cases.Double.doubleArrayInBounds:()V                   () -> ok
 jpamb.cases.EdgeCases.assertAllEqual:(III)V                  (1, 1, 1) -> ok
 jpamb.cases.EdgeCases.assertAllEqual:(III)V                  (1, 2, 3) -> assertion error
 jpamb.cases.EdgeCases.assertFalse:(Z)V                       (false) -> ok

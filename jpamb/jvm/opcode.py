@@ -71,8 +71,13 @@ class Opcode(ABC):
                 opr = Goto
             case "return":
                 opr = Return
+            case "double":
+                opr = Double
+
             case "negate":
                 opr = Negate
+            case "comparefloating":
+                opr = CompareFloating
             case "invoke":
                 match json["access"]:
                     case "virtual":
@@ -147,6 +152,13 @@ class Push(Opcode):
                     case 5:
                         return "iconst_5"
                 return f"ldc [{self.value.value}]"
+            case jvm.Double():
+                match self.value.value:
+                    case 0:
+                        return "dconst_0"
+                    case 1:
+                        return "dconst_1"
+                return f"ldc2_w [{self.value.value}]"
             case jvm.Reference():
                 assert self.value.value is None, f"what is {self.value}"
                 return "aconst_null"
@@ -170,6 +182,21 @@ class Push(Opcode):
                     return "iconst_i"
                 else:
                     return "ldc"
+            case jvm.Double():
+                if self.value.value in (0, 1):
+                    return "dconst_0" if self.value.value == 0 else "dconst_1"
+                else:
+                    return "ldc2_w"
+            case jvm.Float():
+                if self.value.value in (0, 1, 2):
+                    return f"fconst_{int(self.value.value)}"
+                else:
+                    return "ldc"
+            case jvm.Long():
+                if self.value.value in (0, 1):
+                    return "lconst_0" if self.value.value == 0 else "lconst_1"
+                else:
+                    return "ldc2_w"
             case jvm.Reference():
                 return "aconst_null"
 
@@ -199,6 +226,9 @@ class Negate(Opcode):
         match self.type:
             case jvm.Int():
                 return "ineg"
+            case jvm.Double():
+                return "dneg"
+        return super().real()
 
     def __str__(self):
         return self.real()
@@ -297,6 +327,8 @@ class ArrayStore(Opcode):
                 return "aastore"
             case jvm.Int():
                 return "iastore"
+            case jvm.Double():
+                return "dastore"
 
         return super().real()
 
@@ -365,6 +397,8 @@ class ArrayLoad(Opcode):
                 return "iaload"
             case jvm.Char():
                 return "caload"
+            case jvm.Double():
+                return "daload"
 
         return super().real()
 
@@ -586,25 +620,26 @@ class Store(Opcode):
         )
 
     def real(self) -> str:
-        # Handle reference type specifically since we see it in the error
-        if isinstance(self.type, jvm.Reference):
-            return f"astore_{self.index}" if self.index < 4 else f"astore {self.index}"
-        # Handle integer type
-        elif isinstance(self.type, jvm.Int):
-            return f"istore_{self.index}" if self.index < 4 else f"istore {self.index}"
+        match self.type:
+            case jvm.Reference():
+                return f"astore_{self.index}" if self.index < 4 else f"astore {self.index}"
+            case jvm.Int():
+                return f"istore_{self.index}" if self.index < 4 else f"istore {self.index}"
+            case jvm.Double():
+                return f"dstore_{self.index}" if self.index < 4 else f"dstore {self.index}"
         return super().real()
 
     def semantics(self) -> str | None:
         return None
 
     def mnemonic(self) -> str:
-        if isinstance(self.type, jvm.Reference):
-            return "astore_n" if self.index < 4 else "astore"
-        # Handle integer type
-        elif isinstance(self.type, jvm.Int):
-            return "istore_n" if self.index < 4 else "istore"
-        return ""
-
+        match self.type:
+            case jvm.Reference():
+                return "astore_n" if self.index < 4 else "astore"
+            case jvm.Int():
+                return "istore_n" if self.index < 4 else "istore"
+            case jvm.Double():
+                return "dstore_n" if self.index < 4 else "dstore"
         return self.real()
 
     def __str__(self):
@@ -639,6 +674,47 @@ class BinaryOpr(enum.Enum):
 
 
 @dataclass(frozen=True, order=True)
+class CompareFloating(Opcode):
+    """The compare floating opcode for comparing double/float values.
+    
+    According to the JVM spec:
+    - dcmpg/dcmpl: Compare two doubles, push -1, 0, or 1
+    - fcmpg/fcmpl: Compare two floats, push -1, 0, or 1
+    - The 'g' variant pushes 1 if either value is NaN
+    - The 'l' variant pushes -1 if either value is NaN
+    """
+
+    type: jvm.Type
+    onnan: int  # 1 for 'g' variant, -1 for 'l' variant
+
+    @classmethod
+    def from_json(cls, json: dict) -> "Opcode":
+        return cls(
+            offset=json["offset"],
+            type=jvm.Type.from_json(json["type"]),
+            onnan=json["onnan"],
+        )
+
+    def real(self) -> str:
+        match self.type:
+            case jvm.Double():
+                return "dcmpg" if self.onnan == 1 else "dcmpl"
+            case jvm.Float():
+                return "fcmpg" if self.onnan == 1 else "fcmpl"
+        return super().real()
+
+    def semantics(self) -> str | None:
+        return None
+
+    def mnemonic(self) -> str:
+        return self.real()
+
+    def __str__(self):
+        suffix = "g" if self.onnan == 1 else "l"
+        return f"cmp{suffix}:{self.type}"
+
+
+@dataclass(frozen=True, order=True)
 class Binary(Opcode):
     type: jvm.Type
     operant: BinaryOpr
@@ -666,6 +742,16 @@ class Binary(Opcode):
                 return "imul"
             case (jvm.Int(), BinaryOpr.Sub):
                 return "isub"
+            case (jvm.Double(), BinaryOpr.Add):
+                return "dadd"
+            case (jvm.Double(), BinaryOpr.Rem):
+                return "drem"
+            case (jvm.Double(), BinaryOpr.Div):
+                return "ddiv"
+            case (jvm.Double(), BinaryOpr.Mul):
+                return "dmul"
+            case (jvm.Double(), BinaryOpr.Sub):
+                return "dsub"
         raise NotImplementedError(f"Unhandled real {self!r}")
 
     def semantics(self) -> str | None:
@@ -691,24 +777,27 @@ class Load(Opcode):
         )
 
     def real(self) -> str:
-        # Handle reference type
-        if isinstance(self.type, jvm.Reference):
-            return f"aload_{self.index}" if self.index < 4 else f"aload {self.index}"
-        # Handle integer type
-        elif isinstance(self.type, jvm.Int):
-            return f"iload_{self.index}" if self.index < 4 else f"iload {self.index}"
+        match self.type:
+            case jvm.Reference():
+                return f"aload_{self.index}" if self.index < 4 else f"aload {self.index}"
+            case jvm.Int():
+                return f"iload_{self.index}" if self.index < 4 else f"iload {self.index}"
+            case jvm.Double():
+                return f"dload_{self.index}" if self.index < 4 else f"dload {self.index}"
         return super().real()
 
     def semantics(self) -> str | None:
         return None
 
     def mnemonic(self) -> str:
-        if isinstance(self.type, jvm.Reference):
-            return "aload_n" if self.index < 4 else "aload"
-        # Handle integer type
-        elif isinstance(self.type, jvm.Int):
-            return "iload_n" if self.index < 4 else "iload"
-        return ""
+        match self.type:
+            case jvm.Reference():
+                return "aload_n" if self.index < 4 else "aload"
+            case jvm.Int():
+                return "iload_n" if self.index < 4 else "iload"
+            case jvm.Double():
+                return "dload_n" if self.index < 4 else "dload"
+        return self.real()
 
     def __str__(self):
         return f"load:{self.type} {self.index}"
