@@ -1,0 +1,541 @@
+{
+  "access": [
+    "public",
+    "super"
+  ],
+  "annotations": [],
+  "bootstrapmethods": [],
+  "enclosingmethod": null,
+  "fields": [
+    {
+      "access": [
+        "static",
+        "final",
+        "synthetic"
+      ],
+      "annotations": [],
+      "name": "$assertionsDisabled",
+      "type": {
+        "annotations": [],
+        "base": "boolean"
+      },
+      "value": null
+    }
+  ],
+  "innerclasses": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "access": [
+        "public"
+      ],
+      "annotations": [],
+      "code": {
+        "annotations": [],
+        "bytecode": [
+          {
+            "index": 0,
+            "offset": 0,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "access": "special",
+            "method": {
+              "args": [],
+              "is_interface": false,
+              "name": "<init>",
+              "ref": {
+                "kind": "class",
+                "name": "java/lang/Object"
+              },
+              "returns": null
+            },
+            "offset": 1,
+            "opr": "invoke"
+          },
+          {
+            "offset": 4,
+            "opr": "return",
+            "type": null
+          }
+        ],
+        "exceptions": [],
+        "lines": [
+          {
+            "line": 5,
+            "offset": 0
+          }
+        ],
+        "max_locals": 1,
+        "max_stack": 1,
+        "stack_map": null
+      },
+      "default": null,
+      "exceptions": [],
+      "name": "<init>",
+      "params": [],
+      "returns": {
+        "annotations": [],
+        "type": null
+      },
+      "typeparams": []
+    },
+    {
+      "access": [
+        "public",
+        "static"
+      ],
+      "annotations": [
+        {
+          "is_runtime_visible": true,
+          "type": "jpamb/utils/Case",
+          "values": {
+            "value": {
+              "type": "string",
+              "value": "(1) -> ok"
+            }
+          }
+        }
+      ],
+      "code": {
+        "annotations": [],
+        "bytecode": [
+          {
+            "index": 0,
+            "offset": 0,
+            "opr": "load",
+            "type": "int"
+          },
+          {
+            "offset": 1,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 100
+            }
+          },
+          {
+            "condition": "le",
+            "offset": 3,
+            "opr": "if",
+            "target": 8
+          },
+          {
+            "index": 0,
+            "offset": 6,
+            "opr": "load",
+            "type": "int"
+          },
+          {
+            "offset": 7,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 1000
+            }
+          },
+          {
+            "condition": "ge",
+            "offset": 10,
+            "opr": "if",
+            "target": 32
+          },
+          {
+            "amount": 1,
+            "index": 0,
+            "offset": 13,
+            "opr": "incr"
+          },
+          {
+            "offset": 16,
+            "opr": "goto",
+            "target": 3
+          },
+          {
+            "index": 0,
+            "offset": 19,
+            "opr": "load",
+            "type": "int"
+          },
+          {
+            "offset": 20,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 90
+            }
+          },
+          {
+            "condition": "le",
+            "offset": 22,
+            "opr": "if",
+            "target": 16
+          },
+          {
+            "index": 0,
+            "offset": 25,
+            "opr": "load",
+            "type": "int"
+          },
+          {
+            "offset": 26,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 900
+            }
+          },
+          {
+            "condition": "ge",
+            "offset": 29,
+            "opr": "if",
+            "target": 32
+          },
+          {
+            "amount": 1,
+            "index": 0,
+            "offset": 32,
+            "opr": "incr"
+          },
+          {
+            "offset": 35,
+            "opr": "goto",
+            "target": 11
+          },
+          {
+            "index": 0,
+            "offset": 38,
+            "opr": "load",
+            "type": "int"
+          },
+          {
+            "offset": 39,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 80
+            }
+          },
+          {
+            "condition": "le",
+            "offset": 41,
+            "opr": "if",
+            "target": 24
+          },
+          {
+            "index": 0,
+            "offset": 44,
+            "opr": "load",
+            "type": "int"
+          },
+          {
+            "offset": 45,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 800
+            }
+          },
+          {
+            "condition": "ge",
+            "offset": 48,
+            "opr": "if",
+            "target": 32
+          },
+          {
+            "amount": 1,
+            "index": 0,
+            "offset": 51,
+            "opr": "incr"
+          },
+          {
+            "offset": 54,
+            "opr": "goto",
+            "target": 19
+          },
+          {
+            "field": {
+              "class": "jpamb/cases/Parallel",
+              "name": "$assertionsDisabled",
+              "type": "boolean"
+            },
+            "offset": 57,
+            "opr": "get",
+            "static": true
+          },
+          {
+            "condition": "ne",
+            "offset": 60,
+            "opr": "ifz",
+            "target": 32
+          },
+          {
+            "index": 0,
+            "offset": 63,
+            "opr": "load",
+            "type": "int"
+          },
+          {
+            "condition": "gt",
+            "offset": 64,
+            "opr": "ifz",
+            "target": 32
+          },
+          {
+            "class": "java/lang/AssertionError",
+            "offset": 67,
+            "opr": "new"
+          },
+          {
+            "offset": 70,
+            "opr": "dup",
+            "words": 1
+          },
+          {
+            "access": "special",
+            "method": {
+              "args": [],
+              "is_interface": false,
+              "name": "<init>",
+              "ref": {
+                "kind": "class",
+                "name": "java/lang/AssertionError"
+              },
+              "returns": null
+            },
+            "offset": 71,
+            "opr": "invoke"
+          },
+          {
+            "offset": 74,
+            "opr": "throw"
+          },
+          {
+            "offset": 75,
+            "opr": "return",
+            "type": null
+          }
+        ],
+        "exceptions": [],
+        "lines": [
+          {
+            "line": 8,
+            "offset": 0
+          },
+          {
+            "line": 9,
+            "offset": 3
+          },
+          {
+            "line": 10,
+            "offset": 6
+          },
+          {
+            "line": 12,
+            "offset": 8
+          },
+          {
+            "line": 13,
+            "offset": 11
+          },
+          {
+            "line": 14,
+            "offset": 14
+          },
+          {
+            "line": 16,
+            "offset": 16
+          },
+          {
+            "line": 17,
+            "offset": 19
+          },
+          {
+            "line": 18,
+            "offset": 22
+          },
+          {
+            "line": 21,
+            "offset": 24
+          },
+          {
+            "line": 23,
+            "offset": 32
+          }
+        ],
+        "max_locals": 1,
+        "max_stack": 2,
+        "stack_map": [
+          {
+            "index": 3,
+            "type": "same"
+          },
+          {
+            "index": 8,
+            "type": "same"
+          },
+          {
+            "index": 11,
+            "type": "same"
+          },
+          {
+            "index": 16,
+            "type": "same"
+          },
+          {
+            "index": 19,
+            "type": "same"
+          },
+          {
+            "index": 24,
+            "type": "same"
+          },
+          {
+            "index": 32,
+            "type": "same"
+          }
+        ]
+      },
+      "default": null,
+      "exceptions": [],
+      "name": "manyBranches",
+      "params": [
+        {
+          "annotations": [],
+          "type": {
+            "annotations": [],
+            "base": "int"
+          },
+          "visible": true
+        }
+      ],
+      "returns": {
+        "annotations": [],
+        "type": null
+      },
+      "typeparams": []
+    },
+    {
+      "access": [
+        "static"
+      ],
+      "annotations": [],
+      "code": {
+        "annotations": [],
+        "bytecode": [
+          {
+            "offset": 0,
+            "opr": "push",
+            "value": {
+              "type": "class",
+              "value": {
+                "kind": "class",
+                "name": "jpamb/cases/Parallel"
+              }
+            }
+          },
+          {
+            "access": "virtual",
+            "method": {
+              "args": [],
+              "name": "desiredAssertionStatus",
+              "ref": {
+                "kind": "class",
+                "name": "java/lang/Class"
+              },
+              "returns": "boolean"
+            },
+            "offset": 2,
+            "opr": "invoke"
+          },
+          {
+            "condition": "ne",
+            "offset": 5,
+            "opr": "ifz",
+            "target": 5
+          },
+          {
+            "offset": 8,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 1
+            }
+          },
+          {
+            "offset": 9,
+            "opr": "goto",
+            "target": 6
+          },
+          {
+            "offset": 12,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 0
+            }
+          },
+          {
+            "field": {
+              "class": "jpamb/cases/Parallel",
+              "name": "$assertionsDisabled",
+              "type": "boolean"
+            },
+            "offset": 13,
+            "opr": "put",
+            "static": true
+          },
+          {
+            "offset": 16,
+            "opr": "return",
+            "type": null
+          }
+        ],
+        "exceptions": [],
+        "lines": [
+          {
+            "line": 5,
+            "offset": 0
+          }
+        ],
+        "max_locals": 0,
+        "max_stack": 1,
+        "stack_map": [
+          {
+            "index": 5,
+            "type": "same"
+          },
+          {
+            "index": 6,
+            "info": {
+              "type": "integer"
+            },
+            "type": "same_locals_1_stack_item_frame"
+          }
+        ]
+      },
+      "default": null,
+      "exceptions": [],
+      "name": "<clinit>",
+      "params": [],
+      "returns": {
+        "annotations": [],
+        "type": null
+      },
+      "typeparams": []
+    }
+  ],
+  "name": "jpamb/cases/Parallel",
+  "super": {
+    "annotations": [],
+    "args": [],
+    "inner": null,
+    "name": "java/lang/Object"
+  },
+  "typeparams": [],
+  "version": [
+    65,
+    0
+  ]
+}
