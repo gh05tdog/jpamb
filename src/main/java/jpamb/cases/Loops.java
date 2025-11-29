@@ -34,7 +34,8 @@ public class Loops {
   @Tag({ LOOP, INTEGER_OVERFLOW })
   public static void terminates() {
     short i = 0;
-    while (i++ != 0) {
+    while (i != 0) {
+        i++;
     }
     assert false;
   }
