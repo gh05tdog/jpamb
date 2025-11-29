@@ -3,21 +3,21 @@ package jpamb.cases;
 import jpamb.utils.Case;
 
 public class Parallel {
-    public static void assertTrue() {
-      assert true;
-    }
-
-    public static void assertFalse() {
-      assert false;
-    }
-
-  public static void assertIf(boolean test) {
-    if (test) {
-      assertTrue();
-    } else {
-      assertFalse();
-    }
-  }
+  //   public static void assertTrue() {
+  //     assert true;
+  //   }
+  //
+  //   public static void assertFalse() {
+  //     assert false;
+  //   }
+  //
+  // public static void assertIf(boolean test) {
+  //   if (test) {
+  //     assertTrue();
+  //   } else {
+  //     assertFalse();
+  //   }
+  // }
 
     @Case("(1) -> ok")
     public static void manyBranches(int n) {
@@ -26,21 +26,21 @@ public class Parallel {
                 n++;
             }
 
-            assertIf(n);
+            // assertIf(n);
         } else if (n > 90) {
             while (n < 900) {
                 n++;
             }
 
-            assertIf(n);
+            // assertIf(n);
         } else if (n > 80) {
             while (n < 800) {
                 n++;
             }
 
-            assertTrue();
+            // assertTrue();
         } else {
-            assertFalse();
+            // assertFalse();
         }
     }
 
@@ -50,24 +50,24 @@ public class Parallel {
             if (n > 500) {
                 if (n > 1000) {
                     if (n > 2000) {
-                        assertTrue();
+                        // assertTrue();
                     }
                 } else {
                     if (n > 750) {
-                        assertTrue();
+                        // assertTrue();
                     }
                     else {
-                        assertFalse();
+                        // assertFalse();
                     }
                 }
             } else {
                 if (n > 250) {
-                        assertTrue();
+                        // assertTrue();
                 } else {
                     if (n > 125) {
-                        assertTrue();
+                        // assertTrue();
                     } else {
-                        assertFalse();
+                        // assertFalse();
                     }
                 }
             }
@@ -148,12 +148,10 @@ public class Parallel {
                         a = a * n;
                         b = a / 7;
                         c = b + 100;
-                        assertTrue();
+                        // assertTrue();
                     }
                 } else {
-                    
                     if (n > 750) {
-                        
                         int temp = n;
                         temp = temp + 1;
                         temp = temp + 1;
@@ -165,7 +163,7 @@ public class Parallel {
                         temp = temp + 1;
                         temp = temp + 1;
                         temp = temp + 1;
-                        assertTrue();
+                        // assertTrue();
                     } else {
                         
                         int temp = n;
@@ -178,7 +176,7 @@ public class Parallel {
                         temp = temp - 1;
                         temp = temp * 2;
                         temp = temp + 10000;
-                        assertFalse();
+                        // assertFalse();
                     }
                 }
             } else {
@@ -212,7 +210,7 @@ public class Parallel {
                     res = res + 30;
                     res = res + 40;
                     res = res + 50;
-                    assertTrue();
+                    // assertTrue();
                 } else {
                     if (n > 125) {
                         
@@ -223,9 +221,8 @@ public class Parallel {
                         k = k + 5;
                         k = k * 3;
                         k = k + 5;
-                        assertTrue();
+                        // assertTrue();
                     } else {
-                        
                         int waste = 0;
                         waste = waste + 1;
                         waste = waste + 1;
@@ -233,13 +230,11 @@ public class Parallel {
                         waste = waste + 1;
                         waste = waste + 1;
                         waste = waste + n;
-                        assertFalse();
+                        // assertFalse();
                     }
                 }
             }
         } else {
-            
-            
             n = 20;
             int x = n;
             int y = x + 1;
@@ -258,5 +253,4 @@ public class Parallel {
             assert n == 20;
         }
     }
-
 }
