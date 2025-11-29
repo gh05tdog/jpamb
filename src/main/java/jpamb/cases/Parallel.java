@@ -11,25 +11,36 @@ public class Parallel {
       assert false;
     }
 
+  public static void assertIf(boolean test) {
+    if (test) {
+      assertTrue();
+    } else {
+      assertFalse();
+    }
+  }
+
     @Case("(1) -> ok")
     public static void manyBranches(int n) {
         if (n > -100) {
-            while (n < 1000) {
+            while (n < 0) {
                 n++;
             }
-            assertTrue();
+
+            assertIf(n);
         } else if (n > 90) {
             while (n < 900) {
                 n++;
             }
-            assertTrue();
+
+            assertIf(n);
         } else if (n > 80) {
             while (n < 800) {
                 n++;
             }
-            assertFalse();
+
+            assertTrue();
         } else {
-            assert n > 0;
+            assertFalse();
         }
     }
 
