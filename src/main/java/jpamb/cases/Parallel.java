@@ -52,7 +52,7 @@ public class Parallel {
                     if (n > 2000) {
                         // assertTrue();
                     }
-                } else {
+                } else{
                     if (n > 750) {
                         // assertTrue();
                     }

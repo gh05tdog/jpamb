@@ -4,23 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f9701e-a119-4ef3-a61f-5386461d849e" name="Changes" comment="Added correct version without failing cases">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="62f9701e-a119-4ef3-a61f-5386461d849e" name="Changes" comment="Add manyBranches case and update .gitignore for IDE files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OPCODES.md" beforeDir="false" afterPath="$PROJECT_DIR$/OPCODES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpamb/jvm/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/jpamb/jvm/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpamb/jvm/opcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/jpamb/jvm/opcode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpamb/Runtime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpamb/Runtime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpamb/Runtime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpamb/Runtime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpamb/cases/Parallel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpamb/cases/Parallel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jpamb/cases/Loops.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpamb/cases/Loops.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jpamb/cases/Parallel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpamb/cases/Parallel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/Runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/Runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Arrays.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Arrays.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Calls.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Calls.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/ConditionalLogic.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/ConditionalLogic.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Dependent.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Dependent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Double.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Double.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/EdgeCases.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/EdgeCases.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/FloatOperations.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/FloatOperations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Loops.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Loops.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/MathOperations.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/MathOperations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Parallel.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Parallel.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/RecursionExamples.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/RecursionExamples.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Simple.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Tricky.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/decompiled/jpamb/cases/Tricky.json" afterDir="false" />
@@ -110,17 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Runtime" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
       </set>
     </attachedChunks>
   </component>
@@ -135,6 +130,8 @@
       <workItem from="1763978806587" duration="1728000" />
       <workItem from="1764061996169" duration="1246000" />
       <workItem from="1764063298808" duration="1396000" />
+      <workItem from="1764445716475" duration="188000" />
+      <workItem from="1764447980277" duration="443000" />
     </task>
     <task id="LOCAL-00001" summary="Added correct version without failing cases">
       <option name="closed" value="true" />
@@ -144,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763977293625</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add manyBranches case and update .gitignore for IDE files">
+      <option name="closed" value="true" />
+      <created>1764070451589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764070451589</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +160,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added correct version without failing cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added correct version without failing cases" />
+    <MESSAGE value="Add manyBranches case and update .gitignore for IDE files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add manyBranches case and update .gitignore for IDE files" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

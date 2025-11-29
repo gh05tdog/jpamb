@@ -557,13 +557,19 @@
             "type": "int"
           },
           {
-            "index": 0,
+            "condition": "eq",
             "offset": 3,
+            "opr": "ifz",
+            "target": 10
+          },
+          {
+            "index": 0,
+            "offset": 6,
             "opr": "load",
             "type": "int"
           },
           {
-            "offset": 4,
+            "offset": 7,
             "opr": "push",
             "value": {
               "type": "integer",
@@ -571,28 +577,22 @@
             }
           },
           {
-            "offset": 5,
+            "offset": 8,
             "operant": "add",
             "opr": "binary",
             "type": "int"
           },
           {
             "from": "int",
-            "offset": 6,
+            "offset": 9,
             "opr": "cast",
             "to": "short"
           },
           {
             "index": 0,
-            "offset": 7,
+            "offset": 10,
             "opr": "store",
             "type": "int"
-          },
-          {
-            "condition": "eq",
-            "offset": 8,
-            "opr": "ifz",
-            "target": 10
           },
           {
             "offset": 11,
@@ -661,16 +661,20 @@
             "offset": 2
           },
           {
-            "line": 39,
-            "offset": 10
+            "line": 38,
+            "offset": 4
           },
           {
             "line": 40,
+            "offset": 10
+          },
+          {
+            "line": 41,
             "offset": 16
           }
         ],
         "max_locals": 1,
-        "max_stack": 3,
+        "max_stack": 2,
         "stack_map": [
           {
             "index": 2,
