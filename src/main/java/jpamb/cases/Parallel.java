@@ -2816,7 +2816,7 @@ public class Parallel {
                         k = k + 5;
                         k = k * 3;
                         k = k + 5;
-                        if (k) {
+                        if (k > 0) {
                             k = n;
                         }
                         k = k * 3;
@@ -3143,7 +3143,7 @@ public class Parallel {
                         waste = waste + n;
                         waste = waste + 1;
                         waste = waste + 1;
-                        if (waste) {
+                        if (waste > 0) {
                             waste = n;
                         }
                         waste = waste + 1;
@@ -3160,7 +3160,7 @@ public class Parallel {
                         waste = waste + 1;
                         waste = waste + 1;
                         waste = waste + 1;
-                        if (waste) {
+                        if (waste > 0) {
                             waste = n;
                         }
                         waste = waste + 1;
@@ -3178,7 +3178,7 @@ public class Parallel {
                         waste = waste + 1;
                         waste = waste + n;
                         waste = waste + 1;
-                        if (waste) {
+                        if (waste>0) {
                             waste = n;
                         }
                         waste = waste + 1;
@@ -3198,7 +3198,7 @@ public class Parallel {
                         waste = waste + 1;
                         waste = waste + n;
 
-                        if (waste) {
+                        if (waste > 0) {
                             waste = n;
                         }
                         // assertFalse();
@@ -3308,7 +3308,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -3432,7 +3432,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -3555,7 +3555,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -3678,7 +3678,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -3801,7 +3801,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -3924,7 +3924,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4047,7 +4047,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4170,7 +4170,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4293,7 +4293,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4416,7 +4416,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4539,7 +4539,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4662,7 +4662,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4785,7 +4785,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -4908,7 +4908,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -5031,7 +5031,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -5154,7 +5154,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
@@ -5277,7 +5277,7 @@ public class Parallel {
             z = z * 2;
             w = w * 2;
             
-            if (w) {
+            if (w > 0) {
                 w = n;
             }
             x = x + y + z + w;
