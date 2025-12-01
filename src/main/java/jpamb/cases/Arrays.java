@@ -132,40 +132,14 @@ public class Arrays {
         && array[50] == 'y' && array[51] == 'z' && array[52] == 'a' && array[53] == 'b' && array[54] == 'c'
         && array[55] == 'd' && array[56] == 'e' && array[57] == 'f' && array[58] == 'g' && array[59] == 'h'
         && array[60] == 'i' && array[61] == 'j' && array[62] == 'k' && array[63] == 'l' && array[64] == 'm'
-        && array[65] == 'n' && array[66] == 'o' && array[67] == 'p' && array[68] == 'q' && array[69] == 'r'
-        && array[70] == 's' && array[71] == 't' && array[72] == 'u' && array[73] == 'v' && array[74] == 'w'
-        && array[75] == 'x' && array[76] == 'y' && array[77] == 'z' && array[78] == 'a' && array[79] == 'b'
-        && array[80] == 'c' && array[81] == 'd' && array[82] == 'e' && array[83] == 'f' && array[84] == 'g'
-        && array[85] == 'h' && array[86] == 'i' && array[87] == 'j' && array[88] == 'k' && array[89] == 'l'
-        && array[90] == 'm' && array[91] == 'n' && array[92] == 'o' && array[93] == 'p' && array[94] == 'q'
-        && array[95] == 'r' && array[96] == 's' && array[97] == 't' && array[98] == 'u' && array[99] == 'v'
-        && array[100] == 'w' && array[101] == 'x' && array[102] == 'y' && array[103] == 'z' && array[104] == 'a'
-        && array[105] == 'b' && array[106] == 'c' && array[107] == 'd' && array[108] == 'e' && array[109] == 'f'
-        && array[110] == 'g' && array[111] == 'h' && array[112] == 'i' && array[113] == 'j' && array[114] == 'k'
-        && array[115] == 'l' && array[116] == 'm' && array[117] == 'n' && array[118] == 'o' && array[119] == 'p'
-        && array[120] == 'q' && array[121] == 'r' && array[122] == 's' && array[123] == 't' && array[124] == 'u'
-        && array[125] == 'v' && array[126] == 'w' && array[127] == 'x' && array[128] == 'y' && array[129] == 'z'
-        && array[130] == 'a' && array[131] == 'b' && array[132] == 'c' && array[133] == 'd' && array[134] == 'e'
-        && array[135] == 'f' && array[136] == 'g' && array[137] == 'h' && array[138] == 'i' && array[139] == 'j'
-        && array[140] == 'k' && array[141] == 'l' && array[142] == 'm' && array[143] == 'n' && array[144] == 'o'
-        && array[145] == 'p' && array[146] == 'q' && array[147] == 'r' && array[148] == 's' && array[149] == 't'
-        && array[150] == 'u' && array[151] == 'v' && array[152] == 'w' && array[153] == 'x' && array[154] == 'y'
-        && array[155] == 'z' && array[156] == 'a' && array[157] == 'b' && array[158] == 'c' && array[159] == 'd'
-        && array[160] == 'e' && array[161] == 'f' && array[162] == 'g' && array[163] == 'h' && array[164] == 'i'
-        && array[165] == 'j' && array[166] == 'k' && array[167] == 'l' && array[168] == 'm' && array[169] == 'n'
-        && array[170] == 'o' && array[171] == 'p' && array[172] == 'q' && array[173] == 'r' && array[174] == 's'
-        && array[175] == 't' && array[176] == 'u' && array[177] == 'v' && array[178] == 'w' && array[179] == 'x'
-        && array[180] == 'y' && array[181] == 'z' && array[182] == 'a' && array[183] == 'b' && array[184] == 'c'
-        && array[185] == 'd' && array[186] == 'e' && array[187] == 'f' && array[188] == 'g' && array[189] == 'h'
-        && array[190] == 'i' && array[191] == 'j' && array[192] == 'k' && array[193] == 'l' && array[194] == 'm'
-        && array[195] == 'n' && array[196] == 'o' && array[197] == 'p' && array[198] == 'q' && array[199] == 'r';
+        && array[65] == 'n' && array[66] == 'o' && array[67] == 'p' && array[68] == 'q' && array[69] == 'r';
   }
 
   @Case("([I: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) -> ok")
   @Case("([I: 1, 2, 3]) -> out of bounds")
   @Case("([I: ]) -> out of bounds")
   @Tag({ ARRAY })
-  public static void arraySpell10(int[] array) {
+    public static void arraySpell10(int[] array) {
     assert array[0] == 1
         && array[1] == 2
         && array[2] == 3
