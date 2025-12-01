@@ -2709,6 +2709,512 @@
                     "values": {
                       "value": {
                         "type": "string",
+                        "value": "([C: 'h','e','l','l','o','w','o','r','l','d']) -> ok"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "annotation",
+                  "value": {
+                    "type": "jpamb/utils/Case",
+                    "values": {
+                      "value": {
+                        "type": "string",
+                        "value": "([C: 'x']) -> assertion error"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "annotation",
+                  "value": {
+                    "type": "jpamb/utils/Case",
+                    "values": {
+                      "value": {
+                        "type": "string",
+                        "value": "([C: ]) -> out of bounds"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "is_runtime_visible": true,
+          "type": "jpamb/utils/Tag",
+          "values": {
+            "value": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "enum",
+                  "value": {
+                    "name": "ARRAY",
+                    "type": {
+                      "kind": "class",
+                      "name": "jpamb/utils/Tag$TagType"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "code": {
+        "annotations": [],
+        "bytecode": [
+          {
+            "field": {
+              "class": "jpamb/cases/Arrays",
+              "name": "$assertionsDisabled",
+              "type": "boolean"
+            },
+            "offset": 0,
+            "opr": "get",
+            "static": true
+          },
+          {
+            "condition": "ne",
+            "offset": 3,
+            "opr": "ifz",
+            "target": 56
+          },
+          {
+            "index": 0,
+            "offset": 6,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 7,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 0
+            }
+          },
+          {
+            "offset": 8,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 9,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 104
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 11,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 14,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 15,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 1
+            }
+          },
+          {
+            "offset": 16,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 17,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 101
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 19,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 22,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 23,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 2
+            }
+          },
+          {
+            "offset": 24,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 25,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 108
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 27,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 30,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 31,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 3
+            }
+          },
+          {
+            "offset": 32,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 33,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 108
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 35,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 38,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 39,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 4
+            }
+          },
+          {
+            "offset": 40,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 41,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 111
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 43,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 46,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 47,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 5
+            }
+          },
+          {
+            "offset": 48,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 49,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 119
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 51,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 54,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 55,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 6
+            }
+          },
+          {
+            "offset": 57,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 58,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 111
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 60,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 63,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 64,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 7
+            }
+          },
+          {
+            "offset": 66,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 67,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 114
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 69,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 72,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 73,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 8
+            }
+          },
+          {
+            "offset": 75,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 76,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 108
+            }
+          },
+          {
+            "condition": "ne",
+            "offset": 78,
+            "opr": "if",
+            "target": 52
+          },
+          {
+            "index": 0,
+            "offset": 81,
+            "opr": "load",
+            "type": "ref"
+          },
+          {
+            "offset": 82,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 9
+            }
+          },
+          {
+            "offset": 84,
+            "opr": "array_load",
+            "type": "char"
+          },
+          {
+            "offset": 85,
+            "opr": "push",
+            "value": {
+              "type": "integer",
+              "value": 100
+            }
+          },
+          {
+            "condition": "eq",
+            "offset": 87,
+            "opr": "if",
+            "target": 56
+          },
+          {
+            "class": "java/lang/AssertionError",
+            "offset": 90,
+            "opr": "new"
+          },
+          {
+            "offset": 93,
+            "opr": "dup",
+            "words": 1
+          },
+          {
+            "access": "special",
+            "method": {
+              "args": [],
+              "is_interface": false,
+              "name": "<init>",
+              "ref": {
+                "kind": "class",
+                "name": "java/lang/AssertionError"
+              },
+              "returns": null
+            },
+            "offset": 94,
+            "opr": "invoke"
+          },
+          {
+            "offset": 97,
+            "opr": "throw"
+          },
+          {
+            "offset": 98,
+            "opr": "return",
+            "type": null
+          }
+        ],
+        "exceptions": [],
+        "lines": [
+          {
+            "line": 105,
+            "offset": 0
+          },
+          {
+            "line": 115,
+            "offset": 56
+          }
+        ],
+        "max_locals": 1,
+        "max_stack": 2,
+        "stack_map": [
+          {
+            "index": 52,
+            "type": "same"
+          },
+          {
+            "index": 56,
+            "type": "same"
+          }
+        ]
+      },
+      "default": null,
+      "exceptions": [],
+      "name": "arraySpellsHelloWorld",
+      "params": [
+        {
+          "annotations": [],
+          "type": {
+            "annotations": [],
+            "kind": "array",
+            "type": {
+              "annotations": [],
+              "base": "char"
+            }
+          },
+          "visible": true
+        }
+      ],
+      "returns": {
+        "annotations": [],
+        "type": null
+      },
+      "typeparams": []
+    },
+    {
+      "access": [
+        "public",
+        "static"
+      ],
+      "annotations": [
+        {
+          "is_runtime_visible": true,
+          "type": "jpamb/utils/Cases",
+          "values": {
+            "value": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "annotation",
+                  "value": {
+                    "type": "jpamb/utils/Case",
+                    "values": {
+                      "value": {
+                        "type": "string",
                         "value": "([I: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) -> ok"
                       }
                     }
@@ -3151,11 +3657,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 105,
+            "line": 122,
             "offset": 0
           },
           {
-            "line": 115,
+            "line": 132,
             "offset": 56
           }
         ],
@@ -3987,11 +4493,11 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 122,
+            "line": 139,
             "offset": 0
           },
           {
-            "line": 142,
+            "line": 159,
             "offset": 106
           }
         ],
@@ -4267,27 +4773,27 @@
         "exceptions": [],
         "lines": [
           {
-            "line": 148,
+            "line": 165,
             "offset": 0
           },
           {
-            "line": 149,
+            "line": 166,
             "offset": 2
           },
           {
-            "line": 150,
+            "line": 167,
             "offset": 8
           },
           {
-            "line": 149,
+            "line": 166,
             "offset": 14
           },
           {
-            "line": 152,
+            "line": 169,
             "offset": 16
           },
           {
-            "line": 153,
+            "line": 170,
             "offset": 25
           }
         ],

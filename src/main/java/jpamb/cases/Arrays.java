@@ -97,6 +97,23 @@ public class Arrays {
         && array[4] == 'o';
   }
 
+    @Case("([C: 'h','e','l','l','o','w','o','r','l','d']) -> ok")
+  @Case("([C: 'x']) -> assertion error")
+  @Case("([C: ]) -> out of bounds")
+  @Tag({ ARRAY })
+  public static void arraySpellsHelloWorld(char[] array) {
+    assert array[0] == 'h'
+        && array[1] == 'e'
+        && array[2] == 'l'
+        && array[3] == 'l'
+        && array[4] == 'o'
+        && array[5] == 'w'
+        && array[6] == 'o'
+        && array[7] == 'r'
+        && array[8] == 'l'
+        && array[9] == 'd';
+  }
+
   @Case("([I: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) -> ok")
   @Case("([I: 1, 2, 3]) -> out of bounds")
   @Case("([I: ]) -> out of bounds")
