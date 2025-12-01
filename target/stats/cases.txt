@@ -104,6 +104,8 @@ jpamb.cases.MathOperations.gcd:(II)I                         (10, 5) -> ok
 jpamb.cases.MathOperations.power:(II)I                       (2, 3) -> ok
 jpamb.cases.Parallel.manyBranches:(I)V                       (1) -> ok
 jpamb.cases.Parallel.tooManyBranches:(I)V                    (1) -> ok
+jpamb.cases.Parallel.tooManyBranchesEasyLooped:(I)V          (1) -> ok
+jpamb.cases.Parallel.tooManyBranchesHardLooped:(I)V          (1) -> ok
 jpamb.cases.Parallel.tooManyBranchesV2:(I)V                  (1) -> ok
 jpamb.cases.RecursionExamples.assertPalindromeNumber:(I)V    (121) -> ok
 jpamb.cases.RecursionExamples.assertPalindromeNumber:(I)V    (123) -> assertion error
