@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62f9701e-a119-4ef3-a61f-5386461d849e" name="Changes" comment="Add manyBranches case and update .gitignore for IDE files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpamb/cases/Tricky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpamb/cases/Tricky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpamb/cases/Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpamb/cases/Arrays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,8 @@
       <workItem from="1764061996169" duration="1246000" />
       <workItem from="1764063298808" duration="1396000" />
       <workItem from="1764445716475" duration="188000" />
-      <workItem from="1764447980277" duration="5433000" />
+      <workItem from="1764447980277" duration="6915000" />
+      <workItem from="1764593959488" duration="711000" />
     </task>
     <task id="LOCAL-00001" summary="Added correct version without failing cases">
       <option name="closed" value="true" />

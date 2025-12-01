@@ -8,6 +8,12 @@ jpamb.cases.Arrays.arrayNotEmpty:([I)V                       ([I:]) -> assertion
 jpamb.cases.Arrays.arrayOutOfBounds:()V                      () -> out of bounds
 jpamb.cases.Arrays.arraySometimesNull:(I)V                   (0) -> out of bounds
 jpamb.cases.Arrays.arraySometimesNull:(I)V                   (11) -> null pointer
+jpamb.cases.Arrays.arraySpell10:([I)V                        ([I:1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) -> ok
+jpamb.cases.Arrays.arraySpell10:([I)V                        ([I:1, 2, 3]) -> out of bounds
+jpamb.cases.Arrays.arraySpell10:([I)V                        ([I:]) -> out of bounds
+jpamb.cases.Arrays.arraySpell20:([I)V                        ([I:1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]) -> ok
+jpamb.cases.Arrays.arraySpell20:([I)V                        ([I:1, 2, 3, 4, 5]) -> out of bounds
+jpamb.cases.Arrays.arraySpell20:([I)V                        ([I:]) -> out of bounds
 jpamb.cases.Arrays.arraySpellsHello:([C)V                    ([C:'h', 'e', 'l', 'l', 'o']) -> ok
 jpamb.cases.Arrays.arraySpellsHello:([C)V                    ([C:'x']) -> assertion error
 jpamb.cases.Arrays.arraySpellsHello:([C)V                    ([C:]) -> out of bounds

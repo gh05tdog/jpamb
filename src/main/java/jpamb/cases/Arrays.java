@@ -97,6 +97,50 @@ public class Arrays {
         && array[4] == 'o';
   }
 
+  @Case("([I: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) -> ok")
+  @Case("([I: 1, 2, 3]) -> out of bounds")
+  @Case("([I: ]) -> out of bounds")
+  @Tag({ ARRAY })
+  public static void arraySpell10(int[] array) {
+    assert array[0] == 1
+        && array[1] == 2
+        && array[2] == 3
+        && array[3] == 4
+        && array[4] == 5
+        && array[5] == 6
+        && array[6] == 7
+        && array[7] == 8
+        && array[8] == 9
+        && array[9] == 10;
+  }
+
+  @Case("([I: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]) -> ok")
+  @Case("([I: 1, 2, 3, 4, 5]) -> out of bounds")
+  @Case("([I: ]) -> out of bounds")
+  @Tag({ ARRAY })
+  public static void arraySpell20(int[] array) {
+    assert array[0] == 1
+        && array[1] == 2
+        && array[2] == 3
+        && array[3] == 4
+        && array[4] == 5
+        && array[5] == 6
+        && array[6] == 7
+        && array[7] == 8
+        && array[8] == 9
+        && array[9] == 10
+        && array[10] == 11
+        && array[11] == 12
+        && array[12] == 13
+        && array[13] == 14
+        && array[14] == 15
+        && array[15] == 16
+        && array[16] == 17
+        && array[17] == 18
+        && array[18] == 19
+        && array[19] == 20;
+  }
+
   @Case("([I: 50, 100, 200]) -> ok")
   @Case("([I: ]) -> assertion error")
   @Tag({ ARRAY })
