@@ -1,28 +1,28 @@
 #Bytecode instructions
 | Mnemonic | Opcode Name |  Exists in |  Count |
 | :---- | :---- | :----- | -----: |
+ | [ldc](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.ldc) | [Push](jpamb\jvm\opcode.py?plain=1#L123) |  Arrays Parallel | 1543 |
+ | [if_icmp_cond](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.if_icmp_cond) | [If](jpamb\jvm\opcode.py?plain=1#L806) |  Arrays MathOperations Parallel RecursionExamples Tricky | 874 |
+ | [aload_n](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.aload_n) | [Load](jpamb\jvm\opcode.py?plain=1#L764) |  Arrays Double | 762 |
+ | [caload](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.caload) | [ArrayLoad](jpamb\jvm\opcode.py?plain=1#L379) |  | 645 |
  | [iload_n](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iload_n) | [Load](jpamb\jvm\opcode.py?plain=1#L764) |  Arrays ConditionalLogic Dependent EdgeCases Loops MathOperations Parallel RecursionExamples Simple Tricky | 584 |
- | [iconst_i](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iconst_i) | [Push](jpamb\jvm\opcode.py?plain=1#L123) |  Arrays Dependent Double Loops MathOperations Parallel RecursionExamples Simple Tricky | 436 |
- | [ldc](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.ldc) | [Push](jpamb\jvm\opcode.py?plain=1#L123) |  Arrays Parallel | 358 |
- | [if_icmp_cond](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.if_icmp_cond) | [If](jpamb\jvm\opcode.py?plain=1#L806) |  Arrays MathOperations Parallel RecursionExamples Tricky | 274 |
- | [if_cond](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.if_cond) | [Ifz](jpamb\jvm\opcode.py?plain=1#L932) |  Arrays ConditionalLogic Dependent Loops MathOperations Parallel RecursionExamples Simple Tricky | 244 |
+ | [iconst_i](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iconst_i) | [Push](jpamb\jvm\opcode.py?plain=1#L123) |  Arrays Dependent Double Loops MathOperations Parallel RecursionExamples Simple Tricky | 451 |
+ | [if_cond](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.if_cond) | [Ifz](jpamb\jvm\opcode.py?plain=1#L932) |  Arrays ConditionalLogic Dependent Loops MathOperations Parallel RecursionExamples Simple Tricky | 247 |
  | [istore_n](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.istore_n) | [Store](jpamb\jvm\opcode.py?plain=1#L607) |  Arrays Loops MathOperations Parallel Tricky | 243 |
- | [aload_n](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.aload_n) | [Load](jpamb\jvm\opcode.py?plain=1#L764) |  Arrays Double | 162 |
- | [dup](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.dup) | [Dup](jpamb\jvm\opcode.py?plain=1#L276) |  Arrays ConditionalLogic Double Loops Parallel RecursionExamples Simple Tricky | 151 |
+ | [dup](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.dup) | [Dup](jpamb\jvm\opcode.py?plain=1#L276) |  Arrays ConditionalLogic Double Loops Parallel RecursionExamples Simple Tricky | 154 |
  | [istore](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.istore) | [Store](jpamb\jvm\opcode.py?plain=1#L607) |  Arrays Parallel | 145 |
- | [return](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.return) | [Return](jpamb\jvm\opcode.py?plain=1#L1158) |  Arrays Calls ConditionalLogic Double Loops Parallel RecursionExamples Tricky | 137 |
+ | [return](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.return) | [Return](jpamb\jvm\opcode.py?plain=1#L1158) |  Arrays Calls ConditionalLogic Double Loops Parallel RecursionExamples Tricky | 140 |
+ | [new](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.new) | [New](jpamb\jvm\opcode.py?plain=1#L1000) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 129 |
+ | [invokespecial](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.invokespecial) | [InvokeSpecial](jpamb\jvm\opcode.py?plain=1#L557) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 129 |
+ | [athrow](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.athrow) | [Throw](jpamb\jvm\opcode.py?plain=1#L1039) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 129 |
  | [iadd](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iadd) | [Binary](jpamb\jvm\opcode.py?plain=1#L717) |  Arrays Loops Parallel Tricky | 128 |
- | [new](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.new) | [New](jpamb\jvm\opcode.py?plain=1#L1000) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 126 |
- | [invokespecial](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.invokespecial) | [InvokeSpecial](jpamb\jvm\opcode.py?plain=1#L557) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 126 |
- | [athrow](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.athrow) | [Throw](jpamb\jvm\opcode.py?plain=1#L1039) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 126 |
- | [getstatic](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.getstatic) | [Get](jpamb\jvm\opcode.py?plain=1#L871) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 120 |
+ | [getstatic](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.getstatic) | [Get](jpamb\jvm\opcode.py?plain=1#L871) |  Arrays ConditionalLogic Loops Parallel RecursionExamples Simple Tricky | 123 |
  | [iload](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iload) | [Load](jpamb\jvm\opcode.py?plain=1#L764) |  Arrays Parallel | 114 |
  | [iaload](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iaload) | [ArrayLoad](jpamb\jvm\opcode.py?plain=1#L379) |  Arrays | 99 |
  | [goto](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.goto) | [Goto](jpamb\jvm\opcode.py?plain=1#L1118) |  Arrays Loops MathOperations Parallel Tricky | 78 |
  | [imul](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.imul) | [Binary](jpamb\jvm\opcode.py?plain=1#L717) |  MathOperations Parallel Tricky | 71 |
  | [ireturn](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.ireturn) | [Return](jpamb\jvm\opcode.py?plain=1#L1158) |  Dependent EdgeCases MathOperations Simple | 49 |
  | [isub](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.isub) | [Binary](jpamb\jvm\opcode.py?plain=1#L717) |  Arrays Parallel RecursionExamples | 48 |
- | [caload](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.caload) | [ArrayLoad](jpamb\jvm\opcode.py?plain=1#L379) |  | 45 |
  | [idiv](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.idiv) | [Binary](jpamb\jvm\opcode.py?plain=1#L717) |  Arrays Dependent Parallel Simple Tricky | 44 |
  | [iinc](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iinc) | [Incr](jpamb\jvm\opcode.py?plain=1#L1076) |  MathOperations | 35 |
  | [iastore](https://docs.oracle.com/javase/specs/jvms/se23/html/jvms-6.html#jvms-6.5.iastore) | [ArrayStore](jpamb\jvm\opcode.py?plain=1#L311) |  Arrays | 28 |
